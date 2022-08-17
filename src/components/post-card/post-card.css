@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+
+.postCard {
+    max-width: 400px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.postCard__header {
+    background: #000428;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #004e92, #000428);
+    display: flex;
+    align-content: center;
+    column-gap: 15px;
+    padding: 5px;
+}
+
+.postCard__header-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.postCard__header-name {
+        min-height: 50px;
+        display: inline-flex;
+        align-items: center;
+        font-family: 'Exo 2', sans-serif;
+        color: #fff;
+}
+
+.postCard__post-image {
+    object-fit: cover;
+    margin: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 350px;
+    height: 350px;
+}
+
+.postCard__description {
+    background: #000428;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: auto;
+    padding: 25px 25px;
+    word-wrap: break-word;
+    color: white;
+}
