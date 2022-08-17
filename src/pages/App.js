@@ -1,14 +1,28 @@
-import {useSelector} from "react-redux";
-import {selectuser} from "../features/userSlice";
 import PostsPage from "./PostsPage";
 import AuthPage from "./AuthPage";
+import 'gun/sea';
+import 'gun/axe';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
+import {useEffect, useState} from "react";
 
-const App = () => {
-    const user = useSelector(selectuser)
+
+function App() {
+    const [loading, setLoading] = useState(true)
+    useEffect(() => {
+        console.log(sessionStorage.getItem('recall'))
+        if (!sessionStorage.getItem('recall') && document.location.href.split('/').pop() !== 'auth') {
+            document.location.replace("auth")
+            setLoading(false)
+        }
+    }, [loading])
 
     return (
         <div>
-            {user ? <PostsPage /> : <AuthPage/>}
+            {sessionStorage.getItem('recall') ? <PostsPage /> : <AuthPage />}
         </div>
     )
 }
