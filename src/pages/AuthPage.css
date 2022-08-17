@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__form > h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+}
+
+.login__form > input {
+    min-width: 380px;
+    padding: 20px 0 20px 15px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid black;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.submit__btn {
+    padding: 17px 30px;
+    margin-top: 10px;
+    background: #000428;
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    background: linear-gradient(to right, #004e92, #000428);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+}
