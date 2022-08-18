@@ -8,4 +8,12 @@ const server = app.listen(port, () => {
     console.log(`Listening app at http://localhost:${port}`)
 })
 
-Gun({ web: server })
+Gun({
+    web: server,
+    verify: {
+        check: function () {
+            console.log("PEER CONNECTED")
+            return true
+        }
+    }
+})
