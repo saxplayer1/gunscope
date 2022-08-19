@@ -1,0 +1,5 @@
+.postsPage {
+    display: flex;
+    column-gap: 40px;
+    flex-wrap: wrap;
+}
