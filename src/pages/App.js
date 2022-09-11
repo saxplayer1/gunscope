@@ -17,7 +17,8 @@ function App() {
 
     return (
         <div className={"app"}>
-            {sessionStorage.getItem('recall') ? <PostsPage /> : <AuthPage />}
+            <PostsPage />
+            {/*{sessionStorage.getItem('recall') ? <PostsPage /> : <AuthPage />}*/}
         </div>
     )
 }

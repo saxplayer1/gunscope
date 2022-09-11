@@ -9,11 +9,11 @@ function PostsPage() {
             <div>
                 <PostCard />
                 <PostCard />
-                <PostCard />
+                {/*<PostCard />*/}
             </div>
-            <div>
-                <PostCreation />
-            </div>
+            {/*<div>*/}
+            {/*    <PostCreation />*/}
+            {/*</div>*/}
         </div>
     )
 }
