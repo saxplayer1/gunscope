@@ -1,5 +1,5 @@
 import PostsPage from "./PostsPage";
-import AuthPage from "./AuthPage";
+import AuthPage, {gun} from "./AuthPage";
 import 'gun/sea';
 import 'gun/axe';
 import './App.css'
@@ -14,11 +14,9 @@ function App() {
     //         setLoading(false)
     //     }
     // }, [loading])
-
     return (
         <div className={"app"}>
-            <PostsPage />
-            {/*{sessionStorage.getItem('recall') ? <PostsPage /> : <AuthPage />}*/}
+            {sessionStorage.getItem('recall') ? <PostsPage /> : <AuthPage />}
         </div>
     )
 }

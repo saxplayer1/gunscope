@@ -22,7 +22,6 @@ function AuthPage() {
             console.log('USER CREATED')
             user.auth(name, password, loginUserCallback)
         }
-        document.location.replace("")
     }
 
     function loginUserCallback(ack) {

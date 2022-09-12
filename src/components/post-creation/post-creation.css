@@ -38,7 +38,36 @@
     height: 45px;
     line-height: 45px;
     text-align: center;
+    margin-bottom: 10px;
     width: 100%;
     cursor: pointer;
     font-family: 'Exo 2', sans-serif;
+}
+.post-text-editor-container {
+    margin-top: 10px;
+    width: 350px;
+    height: 200px;
+}
+
+.submit__btn-post {
+    width: 100%;
+    margin-top: 25px;
+    padding: 17px 30px;
+    background: #000428;
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submit-enabled{
+    background: -webkit-linear-gradient(to right, #00c060, #014122);
+    background: linear-gradient(to right, #00c060, #014122);
+}
+
+.submit-disabled{
+    background: -webkit-linear-gradient(to right, #B12E21, #8B0001);
+    background: linear-gradient(to right, #B12E21, #8B0001);
 }

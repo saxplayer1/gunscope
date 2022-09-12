@@ -5,10 +5,25 @@ import './post-card.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as SolidIcons from "@fortawesome/free-solid-svg-icons";
 import * as RegularIcons from "@fortawesome/free-regular-svg-icons"
+import {gun} from "../../pages/AuthPage";
 
-function PostCard() {
+function PostCard(props) {
+    let post = props.post;
     const [liked, setLiked] = useState(true);
     function switchLiked() {
+        if (liked) {
+            gun.get('posts').get(post.id).get('likes').then((likes) => {
+                likes += 1;
+                post.likes += 1;
+                gun.get('posts').get(post.id).get('likes').put(likes)
+            })
+        } else {
+            gun.get('posts').get(post.id).get('likes').then((likes) => {
+                likes -= 1;
+                post.likes -= 1;
+                gun.get('posts').get(post.id).get('likes').put(likes)
+            })
+        }
         setLiked(!liked)
     }
 
@@ -23,29 +38,24 @@ function PostCard() {
                         className={"like-icon like-btn-solid"}
                         icon={SolidIcons.faHeart}/>
                 }
+                <label className={"liked-label"}>
+                    {post.likes}
+                </label>
             </button>
             <button className={"download-btn"}>
-                <a download={"postImage.jpg"} href={postImage}>
+                <a download={"postImage.jpg"} href={post.postImage}>
                     <FontAwesomeIcon
                         className={"download-icon download-btn-empty"}
                         icon={SolidIcons.faDownload}/>
                 </a>
             </button>
             <div className='postCard__header'>
-                <img src={pfp} className='postCard__header-img' alt='pfp'/>
                 <span className='postCard__header-name'>
-                    Test Name
+                    {post.user}
                 </span>
             </div>
-            <img src={postImage} className='postCard__post-image' alt='postImage'/>
-            <div className='postCard__description'>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum."
-                </p>
+            <img src={post.postImage} className='postCard__post-image' alt='postImage'/>
+            <div className='postCard__description' dangerouslySetInnerHTML={{__html: post.postText}}>
             </div>
 
 
