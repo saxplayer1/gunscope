@@ -11,6 +11,7 @@ function PostsPage() {
             posts.push(post)
         }
     })
+    posts = posts.reverse();
     return(
         <div className={"postsPage"}>
             <div>
