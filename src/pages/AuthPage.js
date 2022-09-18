@@ -2,12 +2,8 @@ import React, {useState} from 'react';
 import './AuthPage.css'
 import GUN from "gun";
 import 'gun/sea'
+import {gun} from "./App";
 
-export const gun = GUN({
-    peers: [
-        'http://localhost:3030/gun'
-    ]
-})
 export const user = gun.user().recall({sessionStorage: true});
 
 function AuthPage() {

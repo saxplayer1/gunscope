@@ -1,7 +1,7 @@
 import React, {useState, useRef} from "react";
 import "./post-creation.css"
 import { Editor } from '@tinymce/tinymce-react';
-import {gun} from "../../pages/AuthPage";
+import {gun} from "../../pages/App";
 
 function PostCreation() {
     const [contentEditor, setContentEditor] = useState();

@@ -5,7 +5,7 @@ import './post-card.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as SolidIcons from "@fortawesome/free-solid-svg-icons";
 import * as RegularIcons from "@fortawesome/free-regular-svg-icons"
-import {gun} from "../../pages/AuthPage";
+import {gun} from "../../pages/App";
 
 function PostCard(props) {
     let post = props.post;
