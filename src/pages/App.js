@@ -2,14 +2,8 @@ import PostsPage from "./PostsPage";
 import 'gun/sea';
 import 'gun/axe';
 import './App.css'
-import GUN from "gun";
 import AuthPage from "./AuthPage";
 
-export const gun = GUN({
-    peers: [
-        'http://localhost:3030/gun'
-    ]
-})
 function App() {
     return (
         <div className={"app"}>

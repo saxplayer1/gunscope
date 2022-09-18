@@ -2,7 +2,7 @@ import React from 'react';
 import PostCard from "../components/post-card/post-card";
 import PostCreation from "../components/post-creation/post-creation";
 import "./PostsPage.css"
-import {gun} from "./App";
+import {gun} from "./AuthPage";
 
 function PostsPage() {
     let posts = [];

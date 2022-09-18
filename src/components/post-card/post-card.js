@@ -5,7 +5,7 @@ import './post-card.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as SolidIcons from "@fortawesome/free-solid-svg-icons";
 import * as RegularIcons from "@fortawesome/free-regular-svg-icons"
-import {gun} from "../../pages/App";
+import {gun} from "../../pages/AuthPage";
 
 function PostCard(props) {
     let post = props.post;
@@ -54,7 +54,9 @@ function PostCard(props) {
                     {post.user}
                 </span>
             </div>
-            <img src={post.postImage} className='postCard__post-image' alt='postImage'/>
+            {post.postImage
+                ? <img src={post.postImage} className='postCard__post-image' alt='postImage'/>
+                : <div/>}
             <div className='postCard__description' dangerouslySetInnerHTML={{__html: post.postText}}>
             </div>
 
