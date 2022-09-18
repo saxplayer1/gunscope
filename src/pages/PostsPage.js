@@ -12,6 +12,7 @@ function PostsPage() {
         }
     })
     posts = posts.reverse();
+    console.log(posts)
     return(
         <div className={"postsPage"}>
             <div>
