@@ -3,6 +3,7 @@ import 'gun/sea';
 import 'gun/axe';
 import './App.css'
 import GUN from "gun";
+import AuthPage from "./AuthPage";
 
 export const gun = GUN({
     peers: [

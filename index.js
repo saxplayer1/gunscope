@@ -12,7 +12,6 @@ Gun({
     web: server,
     verify: {
         check: function () {
-            console.log("PEER CONNECTED")
             return true
         }
     }
